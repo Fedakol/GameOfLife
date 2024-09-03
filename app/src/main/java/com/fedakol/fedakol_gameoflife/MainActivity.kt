@@ -63,7 +63,7 @@ fun TheGameOfLife() {
     fun CellChooser(): String {
         return if (Random.nextBoolean()) "живая" else "мертвая"
     }
-
+    // Function to get the corresponding text based on cell type
     fun CellSubText(CellType: String): String {
         return when (CellType) {
             "живая" -> "и уже плодится"
@@ -77,11 +77,11 @@ fun TheGameOfLife() {
     // Function to get the corresponding icon based on cell type
     fun CellIcon(CellType: String): ImageVector {
         return when (CellType) {
-            "живая" -> Icons.Default.Check // For example, a heart icon
-            "мертвая" -> Icons.Default.Close // A warning icon
-            "жизнь зародилась" -> Icons.Default.AddCircle // A happy face icon
-            "жизнь погибла" -> Icons.Default.Delete // A sad face icon
-            else -> Icons.Default.Warning // Fallback icon
+            "живая" -> Icons.Default.Check 
+            "мертвая" -> Icons.Default.Close 
+            "жизнь зародилась" -> Icons.Default.AddCircle 
+            "жизнь погибла" -> Icons.Default.Delete 
+            else -> Icons.Default.Warning 
         }
     }
 
